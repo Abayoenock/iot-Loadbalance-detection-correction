@@ -1,0 +1,6 @@
+.ActiveLink li {
+  @apply hover:bg-[#222]  bg-[#222] bg-noiseBg  pl-8 w-full before:absolute before:w-[16px] before:h-full before:bg-gray-500 before:left-0 before:top-0 before:rounded-none after:absolute  overflow-y-hidden  before:animate-pulse;
+}
+.ActiveLink li::after {
+  animation: animateKay 3s ease-in-out infinite;
+}

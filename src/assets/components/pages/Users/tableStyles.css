@@ -1,0 +1,40 @@
+/* DataTableStyles.css */
+
+/* Customize the background of the entire table */
+.rdt_Table {
+  background-color: transparent !important; /* Your desired background color */
+}
+
+/* Customize font size and color of table headers */
+.rdt_TableHeader {
+  font-size: 16px; /* Your desired font size */
+  color: #333; /* Your desired font color */
+  background-color: transparent !important;
+}
+
+/* Customize font size and color of table cells */
+.rdt_TableRow {
+  font-size: 14px; /* Your desired font size */
+  color: #eadcdc !important; /* Your desired font color */
+  background-color: transparent !important;
+  border-bottom: 1px gray solid !important;
+}
+
+.rdt_TableCell {
+  background-color: transparent !important;
+  padding: 5px 0px;
+}
+.rdt_TableHeadRow {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  color: #eadcdc !important; /* Your desired font color */
+}
+.rdt_TableHeadRow svg {
+  fill: #eadcdc !important;
+}
+.rdt_Pagination {
+  background-color: transparent !important;
+  color: #eadcdc !important; /* Your desired font color */
+}
+.sc-ezrcWL svg {
+  fill: rgb(221, 216, 216);
+}
