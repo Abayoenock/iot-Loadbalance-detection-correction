@@ -25,22 +25,20 @@ function DashboardHeader({ navToggle, setNavToggle, logOut }) {
   return (
     <>
       <header
-        className={`flex transition-all duration-300 w-full pl-[270px]     ${
+        className={`flex transition-all duration-300 w-full md:pl-[270px]     ${
           navToggle == false
             ? " bg-white bg-opacity-10 shadow-sm backdrop-blur-sm z-[90]"
             : " bg-transparent z-[33] "
-        }  w-full  justify-between  md:justify-between p-2 px-8 items-center gap-2 md:z-[30] fixed top-[0px]  `}
+        }   justify-between  md:justify-between p-2 px-8 items-center gap-2 md:z-[30] fixed top-[0px]  `}
       >
-        <CurrentDateTime />
+        <div className="hidden md:flex">
+          <CurrentDateTime />
+        </div>
         <div
-          className={` w-full justify-end flex gap-x-4 flex-row-reverse md:flex-row items-center transition-all duration-500 ease-out ${
+          className={` w-full     md:justify-start flex gap-x-4 md:flex-row-reverse flex-row items-center transition-all duration-500 ease-out ${
             navToggle == false ? "flex" : "hidden"
           }`}
         >
-          <p className="text-sm text-gray-300 font-semibold ">
-            <span className="text-yellow-600 ">Hi</span> ,{" "}
-            {userProfileData.firstName} {userProfileData.lastName}
-          </p>
           <div className="relative">
             <Avatar
               alt={userProfileData.firstName}
@@ -52,6 +50,10 @@ function DashboardHeader({ navToggle, setNavToggle, logOut }) {
               sx={{ cursor: "pointer" }}
             />
           </div>
+          <p className="text-sm text-gray-300 font-semibold ">
+            <span className="text-yellow-600 ">Hi</span> ,{" "}
+            {userProfileData.firstName} {userProfileData.lastName}
+          </p>
         </div>
 
         <div className="z-[100] flex items-center ">

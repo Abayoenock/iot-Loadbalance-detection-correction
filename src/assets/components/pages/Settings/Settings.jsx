@@ -260,7 +260,7 @@ const Settings = () => {
         </div>
       )}
       {!isLoading && (
-        <div className=" w-full grid grid-cols-2">
+        <div className=" w-full grid grid-cols-1 md:grid-cols-2">
           <div className="w-full flex flex-col  mt-6 px-8">
             {" "}
             <div className=" flex justify-end">

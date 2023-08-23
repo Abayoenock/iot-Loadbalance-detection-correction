@@ -253,7 +253,7 @@ function UserProfile({ myCallBack }) {
             method="post"
             id="profileForm"
             onSubmit={handleSubmit}
-            className=" w-full flex  gap-x-8 gap-y-6  p-2 pt-2   py-8  "
+            className=" w-full flex flex-col md:flex-row  gap-x-8 gap-y-6  p-2 pt-2   py-8  "
           >
             <div className="w-fit ">
               <div className="flex mb-4 w-fit  ">

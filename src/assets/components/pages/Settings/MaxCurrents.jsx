@@ -6,6 +6,7 @@ import useFetch from "../../useFetch"
 import { AuthContext } from "../../AdminDashbard/Dashboard"
 import useSubmitData from "../../useSubmitData/useSubmitData"
 import { toast } from "react-toastify"
+import DotMin from "../../loaders/minDotLoader/DotMin"
 function MaxCurrents() {
   const [phases, setPhases] = useState({ red: 0, yellow: 0, blue: 0 })
   const [isDataLoading, setIsDataLoading] = useState(true)
@@ -169,9 +170,21 @@ function MaxCurrents() {
         <div className=" w-full">
           <button
             type="submit"
-            className=" w-full border-none bg-gray-900 p-3 px-3 text-center text-white text-sm font-semibold rounded-sm transition-all duration-300 hover:bg-gray-950 "
+            disabled={isSubmit}
+            className={` w-full  text-white transition-all duration-300 ${
+              !isSubmit
+                ? "bg-gray-700 hover:bg-gray-800"
+                : "bg-gray-500 cursor-wait "
+            }  focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm  px-5 py-2.5 text-center  `}
           >
-            Update
+            {!isSubmit ? (
+              "Update"
+            ) : (
+              <div className="flex items-center justify-center gap-1 h-full ">
+                {" "}
+                <span>Updating </span> <DotMin />
+              </div>
+            )}
           </button>
         </div>
       </form>

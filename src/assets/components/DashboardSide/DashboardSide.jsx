@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faGauge,
@@ -13,7 +13,9 @@ import ImageWithBlurhash from "../ImageWithBlurhash"
 import { Routes, Route, Link, NavLink } from "react-router-dom"
 import "./activeLinkStyles.css"
 import noiseImage from "../../Images/webImages/noise.png"
+import { AuthContext } from "../AdminDashbard/Dashboard"
 function DashboardSide({ navToggle, setNavToggle, logOut }) {
+  const { role } = useContext(AuthContext)
   return (
     <>
       <aside
@@ -55,77 +57,81 @@ function DashboardSide({ navToggle, setNavToggle, logOut }) {
                 Dashboard
               </li>
             </NavLink>
+            {role == 0 && (
+              <>
+                <NavLink
+                  to="./users"
+                  className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "ActiveLink" : ""
+                  }
+                >
+                  <li
+                    className=" transition-all duration-300 w-full relative  p-3 flex gap-2 items-center  cursor-pointer   text-white hover:bg-white hover:bg-opacity-10 hover:pl-6    "
+                    onClick={() => {
+                      if (window.innerWidth <= 500) {
+                        setNavToggle(() => {
+                          return !navToggle
+                        })
+                      }
+                    }}
+                  >
+                    <FontAwesomeIcon
+                      icon={faUsersGear}
+                      className=" text-xl  opacity-70  "
+                    />{" "}
+                    Users
+                  </li>
+                </NavLink>
 
-            <NavLink
-              to="./users"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "ActiveLink" : ""
-              }
-            >
-              <li
-                className=" transition-all duration-300 w-full relative  p-3 flex gap-2 items-center  cursor-pointer   text-white hover:bg-white hover:bg-opacity-10 hover:pl-6    "
-                onClick={() => {
-                  if (window.innerWidth <= 500) {
-                    setNavToggle(() => {
-                      return !navToggle
-                    })
+                <NavLink
+                  to="./profile"
+                  className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "ActiveLink" : ""
                   }
-                }}
-              >
-                <FontAwesomeIcon
-                  icon={faUsersGear}
-                  className=" text-xl  opacity-70  "
-                />{" "}
-                Users
-              </li>
-            </NavLink>
+                >
+                  <li
+                    className=" transition-all duration-300 w-full relative  p-3 flex gap-2 items-center  cursor-pointer   text-white hover:bg-white hover:bg-opacity-10 hover:pl-6    "
+                    onClick={() => {
+                      if (window.innerWidth <= 500) {
+                        setNavToggle(() => {
+                          return !navToggle
+                        })
+                      }
+                    }}
+                  >
+                    <FontAwesomeIcon
+                      icon={faUserGear}
+                      className=" text-xl  opacity-70  "
+                    />{" "}
+                    Profile
+                  </li>
+                </NavLink>
+                <NavLink
+                  to="./settings"
+                  className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "ActiveLink" : ""
+                  }
+                >
+                  <li
+                    className=" transition-all duration-300 w-full relative  p-3 flex gap-2 items-center  cursor-pointer   text-white hover:bg-white hover:bg-opacity-10 hover:pl-6    "
+                    onClick={() => {
+                      if (window.innerWidth <= 500) {
+                        setNavToggle(() => {
+                          return !navToggle
+                        })
+                      }
+                    }}
+                  >
+                    <FontAwesomeIcon
+                      icon={faCogs}
+                      className=" text-xl  opacity-70  "
+                    />{" "}
+                    Settings
+                  </li>
+                </NavLink>
+              </>
+            )}
 
-            <NavLink
-              to="./profile"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "ActiveLink" : ""
-              }
-            >
-              <li
-                className=" transition-all duration-300 w-full relative  p-3 flex gap-2 items-center  cursor-pointer   text-white hover:bg-white hover:bg-opacity-10 hover:pl-6    "
-                onClick={() => {
-                  if (window.innerWidth <= 500) {
-                    setNavToggle(() => {
-                      return !navToggle
-                    })
-                  }
-                }}
-              >
-                <FontAwesomeIcon
-                  icon={faUserGear}
-                  className=" text-xl  opacity-70  "
-                />{" "}
-                Profile
-              </li>
-            </NavLink>
-            <NavLink
-              to="./settings"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "ActiveLink" : ""
-              }
-            >
-              <li
-                className=" transition-all duration-300 w-full relative  p-3 flex gap-2 items-center  cursor-pointer   text-white hover:bg-white hover:bg-opacity-10 hover:pl-6    "
-                onClick={() => {
-                  if (window.innerWidth <= 500) {
-                    setNavToggle(() => {
-                      return !navToggle
-                    })
-                  }
-                }}
-              >
-                <FontAwesomeIcon
-                  icon={faCogs}
-                  className=" text-xl  opacity-70  "
-                />{" "}
-                Settings
-              </li>
-            </NavLink>
             <li
               className=" transition-all duration-300 w-full relative  p-3 flex gap-2 items-center  cursor-pointer   text-white hover:bg-white hover:bg-opacity-10 hover:pl-6    "
               onClick={() => {
