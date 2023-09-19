@@ -23,14 +23,49 @@ ChartJS.register(
 )
 
 export const options = {
+  maintainAspectRatio: false,
   responsive: true,
   plugins: {
     legend: {
       position: "top",
+      color: "rgba(255, 255, 255, 0.6)",
+      labels: {
+        color: "rgba(255, 255, 255, 0.6)", // Change dataset label text color
+      },
     },
     title: {
       display: true,
-      text: "Currect consumption statistics",
+      text: "Feeding statistics",
+      color: "rgba(255, 255, 255, 0.6)",
+    },
+  },
+  scales: {
+    y: {
+      beginAtZero: true, // Set the minimum value on the y-axis to 0
+      title: {
+        display: true,
+        text: "water in Ltrs and food in kgs", // Label for the y-axis
+        color: "rgba(255, 255, 255, 0.6)",
+      },
+      grid: {
+        color: "rgba(255, 255, 255, 0.5)", // Change Y-axis grid color
+      },
+      ticks: {
+        color: "rgba(255, 255, 255, 0.6)", // Change Y-axis label text color
+      },
+    },
+    x: {
+      title: {
+        display: true,
+        text: "Days", // Label for the x-axis
+        color: "rgba(255, 255, 255, 0.6)",
+      },
+      grid: {
+        color: "rgba(255, 255, 255, 0.5)", // Change x-axis grid color
+      },
+      ticks: {
+        color: "rgba(255, 255, 255, 0.6)", // Change x-axis label text color
+      },
     },
   },
 }

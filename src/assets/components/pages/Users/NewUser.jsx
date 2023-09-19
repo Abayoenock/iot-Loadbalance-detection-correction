@@ -197,7 +197,7 @@ function NewUser() {
                       type="text"
                       name="firstName"
                       id="firstName"
-                      className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-600 peer"
+                      className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-600 peer"
                       placeholder=" "
                       required
                     />
@@ -213,7 +213,7 @@ function NewUser() {
                       type="text"
                       id="lastName"
                       name="lastName"
-                      className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-600 peer"
+                      className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-600 peer"
                       placeholder=" "
                       required
                     />
@@ -229,7 +229,7 @@ function NewUser() {
                       type="tel"
                       name="phoneNumber"
                       id="phoneNumber"
-                      className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-600 peer"
+                      className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-600 peer"
                       placeholder=" "
                       required
                     />
@@ -245,7 +245,7 @@ function NewUser() {
                       type="email"
                       name="email"
                       id="email"
-                      className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-600 peer"
+                      className="block py-2.5 px-0 w-full text-sm text-gray-100 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-600 peer"
                       placeholder=" "
                       required
                     />

@@ -94,7 +94,7 @@ function MaxCurrents() {
     updateResponse()
   }, [serverResponse])
   return (
-    <div className=" w-full mt-[40px] p-6 px-3">
+    <div className=" w-full  p-3 px-3">
       <form
         action=" "
         method="post"
@@ -165,6 +165,31 @@ function MaxCurrents() {
             className="absolute text-xs text-gray-300  duration-300 transform -translate-y-6 scale-75 top-6 -z-10 origin-[0]  peer-focus:text-gray-200  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-[20px]"
           >
             phase 3
+          </label>
+        </div>
+        <div className="w-full px-3 p-2 bg-blue-300 bg-opacity-50 text-xs text-gray-300 ">
+          <FontAwesomeIcon icon={faExclamationCircle} /> The threshold current
+          is the maximum current torelable imbalance between the phases, above
+          this value you will receive an SMS notification
+        </div>
+        <div className="relative z-0 w-full p-3 py-5  group bg-gray-400 bg-opacity-20 ">
+          <input
+            type="number"
+            step={0.1}
+            min={"0"}
+            name="threshold"
+            id="threshold"
+            className="block py-2 px-0 w-full text-[12px] text-gray-100 bg-transparent border-0 border-b-[1px] border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-300 peer"
+            placeholder=" "
+            value={phases.threshold}
+            onChange={changeInput}
+            required
+          />
+          <label
+            htmlFor="threshold"
+            className="absolute text-xs text-gray-300  duration-300 transform -translate-y-6 scale-75 top-6 -z-10 origin-[0]  peer-focus:text-gray-200  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-[20px]"
+          >
+            Threshold Current
           </label>
         </div>
         <div className=" w-full">

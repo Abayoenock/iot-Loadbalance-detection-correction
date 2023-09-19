@@ -30,45 +30,13 @@ function DashboardPage() {
     }, 2000)
   }, [])
 
-  const [month, setMonth] = useState(new Date().getMonth() + 1)
-  const [year, setYear] = useState(new Date().getFullYear())
-
-  const optionsMonth = [
-    {
-      value: "",
-      label: "Select Month",
-    },
-    { value: "1", label: "January" },
-    { value: "2", label: "February" },
-    { value: "3", label: "March" },
-    { value: "4", label: "April" },
-    { value: "5", label: "May" },
-    { value: "6", label: "June" },
-    { value: "7", label: "July" },
-    { value: "8", label: "August" },
-    { value: "9", label: "Septemper" },
-    { value: "10", label: "October" },
-    { value: "11", label: "November" },
-    { value: "12", label: "December" },
-  ]
-
-  const optionsYear = [
-    {
-      value: "",
-      label: "Select Year",
-    },
-    { value: "2022", label: "2022" },
-    { value: "2023", label: "2023" },
-    { value: "2024", label: "2024" },
-  ]
-
   return (
     <div className=" p-6 px-6 ">
       <div className=" w-full grid  gap-3 grid-cols-1 md:grid-cols-3">
         <PhaseIndex />
       </div>
       <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-3 gap-x-6">
-        <div className=" row-start-1 md:row-start-1 md:col-start-2 md:col-span-2 px-4">
+        <div className=" row-start-1 md:row-start-1 md:col-start-2 md:col-span-2 md:px-4 px-2 min-h-[300px] md:h-full ">
           <LineChartAdmin />
         </div>
 

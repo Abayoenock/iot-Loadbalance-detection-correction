@@ -60,13 +60,13 @@ function ForgotPassword() {
     <>
       {serverResponse?.status && <Navigate to="../" replace={true} />}
 
-      <div className="flex-1">
+      <div className="flex-1 bg-white/20  backdrop-blur-sm p-3 px-4 rounded-md ">
         <div className="">
-          <h2 className="text-3xl font-bold text-purple-600  ">
+          <h2 className="text-2xl font-bold text-gray-300  ">
             Forgot Password
           </h2>
         </div>
-        <p className=" mt-4 p-3 bg-purple-100 text-purple-500  text-sm">
+        <p className=" mt-4 p-3 bg-gray-100/40 text-gray-700  text-xs rounded-sm">
           To reset password , enter the phone number you used while registering
           your account{" "}
         </p>
@@ -79,7 +79,7 @@ function ForgotPassword() {
             <div>
               <label
                 htmlFor="phoneNumber"
-                className="block mb-2 text-sm text-gray-600 "
+                className="block mb-2 text-sm text-gray-200 "
               >
                 Phone Number
               </label>
@@ -88,7 +88,7 @@ function ForgotPassword() {
                 name="phoneNumber"
                 id="phoneNumber"
                 placeholder="Enter your phone number"
-                className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md  focus:border-purple-400 dark:focus:border-purple-400 focus:ring-purple-400 focus:outline-none focus:ring focus:ring-opacity-40 text-sm"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md  focus:border-gray-400 dark:focus:border-gray-400 focus:ring-gray-400 focus:outline-none focus:ring focus:ring-opacity-40 text-sm"
                 required
               />
             </div>
@@ -99,9 +99,9 @@ function ForgotPassword() {
                 disabled={isSubmit}
                 className={`  text-white transition-all duration-300 ${
                   !isSubmit
-                    ? "bg-purple-700 hover:bg-purple-800"
-                    : "bg-purple-500 cursor-wait "
-                }  focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm w-full px-5 
+                    ? "bg-gray-900 hover:bg-gray-800"
+                    : "bg-gray-500 cursor-wait "
+                }  focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm w-full px-5 
                       py-2.5 text-center  `}
               >
                 {!isSubmit ? (
@@ -117,7 +117,7 @@ function ForgotPassword() {
                 Back to{" "}
                 <NavLink to={"../"}>
                   {" "}
-                  <span className="text-purple-500">Sign In</span>{" "}
+                  <span className="text-gray-300">Sign In</span>{" "}
                 </NavLink>{" "}
                 ?{" "}
               </p>
